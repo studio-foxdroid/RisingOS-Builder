@@ -4,16 +4,16 @@ on:
   workflow_dispatch:
     inputs:
       BRAND:
-        description: 'Put your device manufacturer name please.'
+        description: 'Redmi'
         required: true
       CODENAME:
-        description: 'Put your device codename please.'
+        description: 'xun'
         required: true
       SIGNING:
         description: 'The build signing. Set to "normal" by default.'
         required: true
         default: 'normal'
-        type: choice
+        type: full
         options:
           - 'full'
           - 'normal'
@@ -22,7 +22,7 @@ on:
         description: 'The build type. Set to "userdebug" by default.'
         required: true
         default: 'userdebug'
-        type: choice
+        type: userdebug
         options:
           - 'eng'
           - 'user'
@@ -31,7 +31,7 @@ on:
         description: 'The build target. Set to "stable" by default.'
         required: true
         default: 'stable'
-        type: choice
+        type: test
         options:
           - 'test'
           - 'stable'
@@ -39,7 +39,7 @@ on:
         description: 'If you wanna build other variants like vanilla, core or gapps.'
         required: false
         default: 'CORE'
-        type: choice
+        type: CORE
         options:
           - 'VANILLA'
           - 'CORE'
